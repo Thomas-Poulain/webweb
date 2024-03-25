@@ -35,7 +35,7 @@ session_start();
 if (isset($_SESSION['username'])) {
     echo "<p>Welcome back, {$_SESSION['username']}!</p>";
 } else {
-    echo "<form id=\"login\" class=\"connect-button-forms\" action=\"login.php\" method=\"post\">
+    echo "<form id=\"login\" class=\"connect-button-forms\" action=\"connect\" method=\"post\">
             <h1>Welcome back.</h1>
             <input id=\"log-login\" type=\"text\" name=\"username\" placeholder=\"Username\">
             <input id=\"log-pass\" type=\"password\" name=\"password\" placeholder=\"Password\">
@@ -43,7 +43,7 @@ if (isset($_SESSION['username'])) {
             <button type=\"submit\">Login</button>
           </form>
 
-          <form id=\"register\" class=\"connect-button-forms\" action=\"register.php\" method=\"post\">
+          <form id=\"register\" class=\"connect-button-forms\" action=\"connect\" method=\"post\">
             <h1>Welcome.</h1>
             <input id=\"reg-prenom\" type=\"text\" name=\"firstname\" placeholder=\"First name\">
             <input id=\"reg-nom\" type=\"text\" name=\"lastname\" placeholder=\"Last name\">
