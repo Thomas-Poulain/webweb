@@ -6,17 +6,15 @@ class User {
     private string $lastName;
     private string $email;
     private string $password;
-    private string $role;
     private string $registrationDate;
 
     //constructeur
-    public function __construct(int $id, string $firstName, string $lastName, string $email, string $password, string $role, string $registrationDate){
+    public function __construct(int $id, string $firstName, string $lastName, string $email, string $password, string $registrationDate){
         $this->id = $id;
         $this->firstName = $firstName;
         $this->lastName = $lastName;
         $this->email = $email;
         $this->password = $password;
-        $this->role = $role;
         $this->registrationDate = $registrationDate;
     }
 
@@ -35,10 +33,6 @@ class User {
 
     public function getPassword(): string{
         return $this->password;
-    }
-
-    public function getRole(): string{
-        return $this->role;
     }
 
     public function getRegistrationDate(): string{
@@ -61,10 +55,6 @@ class User {
 
     public function setPassword(string $password): void{
         $this->password = $password;
-    }
-
-    public function setRole(string $role): void{
-        $this->role = $role;
     }
 
     public function setRegistrationDate(string $registrationDate): void{
