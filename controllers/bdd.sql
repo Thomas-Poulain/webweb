@@ -2,7 +2,7 @@ CREATE TABLE User(
     UserID INT AUTO_INCREMENT PRIMARY KEY,
     FirstName VARCHAR(50),
     LastName VARCHAR(50),
-    Login VARCHAR(50) UNIQUE,
+    email VARCHAR(50) UNIQUE,
     Password VARCHAR(100) ,
     RegistrationDate DEFAULT CURRENT_TIMESTAMP
 );

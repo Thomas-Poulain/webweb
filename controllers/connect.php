@@ -26,10 +26,7 @@ class ConnectController extends Controller{
                 $stmt->bindParam(':username', $username);
                 $stmt->execute();
                 
-                // Traiter les résultats de la requête ici
-                while ($row = $stmt->fetch()) {
-                    // Faire quelque chose avec les résultats
-                }
+				
                 
             } catch(PDOException $e){
                 echo $e->getMessage();
