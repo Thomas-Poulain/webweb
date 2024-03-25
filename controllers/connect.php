@@ -15,27 +15,21 @@ class ConnectController extends Controller{
      * @param $request
      */
     public function post($request){
-        try{
-            // Récupération de l'utilisateur
-            $username = $request['username'];
-            $password = $request['password'];
+        // Récupération de l'utilisateur
+        $username = $request['username'];
+        $password = $request['password'];
 
-            try{
-                $db = new PDO('sqlite:base.db');
-                $stmt = $db->prepare("SELECT * FROM users WHERE username = :username");
-                $stmt->bindParam(':username', $username);
-                $stmt->execute();
-                
-                // Traiter les résultats de la requête ici
-                while ($row = $stmt->fetch()) {
-                    // Faire quelque chose avec les résultats
-                }
-                
-            } catch(PDOException $e){
-                echo $e->getMessage();
-            }
-        } catch(Exception $e) {
-            echo 'Une erreur s\'est produite : '.$e->getMessage();
+        try{
+            $db = new PDO('sqlite:base.db');
+            $stmt = $db->prepare('SELECT password FROM users WHERE username = :username');
+            $stmt->bindParam(':username', $username);
+            $result = $stmt->execute();
+
+            var_dump($result);
+            password_verify($password, $result['password']);
+            
+        } catch(PDOException $e){
+            echo $e->getMessage();
         }
     }
 }

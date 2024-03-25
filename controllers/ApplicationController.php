@@ -134,9 +134,6 @@ class ApplicationController{
         $path = $this->request_path();
         if (array_key_exists($path, $this->routes)){
             $filePath = $this->routes[$path];
-            // if(!str_ends_with($filePath, '.php')){
-            //     $filePath = $filePath.".php";    
-            // }
 
             if(!$this->ends_with($filePath, '.php')){
                 $filePath = $filePath.".php";    
