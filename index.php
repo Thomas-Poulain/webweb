@@ -10,7 +10,6 @@ if (!isset($_SESSION)){
 
 // Configuration
 require (MODEL_DIR.'/user.php');
-
 require_once (__ROOT__.'/config.php');
 
 // ApplicationController
