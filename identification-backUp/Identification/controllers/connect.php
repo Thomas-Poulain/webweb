@@ -16,22 +16,11 @@ class ConnectController extends Controller{
 	 * @param $role
 	 */	
 	public function connection($role){
-		switch ($role){		
-			case 1:
-				$this-> render('/sa_classCreate',[]);
+		switch ($role){  
+			case 'admin':
+				$this-> render('/',[]);
 				break;
-			case 2:
-				header('Location: http://balabox');
-				exit;
-			case 3:
-				header('Location: http://balabox');
-				exit;
-			case 4:
-				header('Location: http://balabox');
-				exit;
-			case 5:
-				header('Location: http://balabox');
-				exit;
+			case 'user':
 		}
 	}
 
