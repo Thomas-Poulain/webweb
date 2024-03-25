@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>OUUUUUUUUUUUURS</title>
+        <title>OURS</title>
         <meta charset="UTF-8"/>
         <html lang="en">
         <meta name="description" content="">
