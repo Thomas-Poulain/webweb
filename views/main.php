@@ -44,7 +44,7 @@ if (isset($_SESSION['username'])) {
 
           <form id=\"register\" class=\"connect-button-forms\" action=\"createUser\" method=\"post\">
             <h1>Welcome.</h1>
-            <input id=\"reg-email\" type=\"email\" name=\"username\" placeholder=\"Email\" required>
+            <input id=\"reg-email\" type=\"email\" name=\"email\" placeholder=\"Email\" required>
             <input id=\"reg-prenom\" type=\"text\" name=\"firstname\" placeholder=\"First name\" required>
             <input id=\"reg-nom\" type=\"text\" name=\"lastname\" placeholder=\"Last name\" required>
             <input id=\"reg-pass\" type=\"password\" name=\"password\" placeholder=\"Password\" required>
