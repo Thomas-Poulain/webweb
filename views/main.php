@@ -16,16 +16,33 @@
     <p id="name">Ursidés</p>
 </header>
 
-<nav>
-    <table>
-        <tr>
-            <th id="home"><a href="index.php">Home</a></th>
-            <th id="about"><a href="about.php">About</a></th>
-            <th id="contact"><a href="contact.php">Contact us</a></th>
-            <th id="connect"><?php echo isset($_SESSION['username']) ? '<a href="/disconnect">Logout</a>' : '<a href="#" onclick="loginShowHide()">Connect</a>'; ?></th>
-        </tr>
-    </table>
-</nav>
+    <?php
+
+        if(isset($_SESSION['username'])){
+            echo "<nav>
+                <table>
+                    <tr>
+                        <th id=\"home\"><a href=\"index.php\">Home</a></th>
+                        <th id=\"about\"><a href=\"about.php\">About</a></th>
+                        <th id=\"contact\"><a href=\"contact.php\">Contact us</a></th>
+                        <th id=\"ChangePasswd\"><a href=\"#\">MDP Oublié</a></th>
+                        <th id=\"connect\"><a href=\"/disconnect\">Logout</a></th>
+                    </tr>
+                </table>
+            </nav>";
+        }else{
+            echo "<nav>
+                <table>
+                    <tr>
+                        <th id=\"home\"><a href=\"index.php\">Home</a></th>
+                        <th id=\"about\"><a href=\"about.php\">About</a></th>
+                        <th id=\"contact\"><a href=\"contact.php\">Contact us</a></th>
+                        <th id=\"connect\"><a href=\"#\" onclick=\"loginShowHide()\">Connect</a></th>
+                    </tr>
+                </table>
+            </nav>";
+        }
+    ?>
 
 <div id="form-background" onclick="loginShowHide()"></div>
 

@@ -6,7 +6,7 @@ class ressource {
     private string $ressrouceType;
     private string $ressourcePath;
     private string $ressourceUpdate;
-    private string $ressourceFirstUpload
+    private string $ressourceFirstUpload;
 }
 
 ?>
