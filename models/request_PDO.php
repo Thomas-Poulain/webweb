@@ -17,11 +17,18 @@ class request_PDO{
      */
     public function connect($username, $password){
         //requête de connexion
-        $connect = $this->db->prepare('SELECT Password FROM User WHERE email=?');
+        $connect = $this->db->prepare('SELECT Password,FirstName FROM User WHERE email=?');
         $connect->bindParam(1,$username);
         $connect->execute();
         $result = $connect->fetch();
-        return password_verify(password_hash($password, PASSWORD_DEFAULT), $result['password']);
+        if(!$result){
+            echo "User not found";
+            return FALSE;
+        }
+        var_dump(password_hash($password, PASSWORD_DEFAULT));
+        var_dump($result['FirstName']);
+        var_dump($result['Password']);
+        return TRUE;
     }
 
     /**
@@ -63,7 +70,7 @@ class request_PDO{
             echo "User not found";
             return;
         }
-        
+
         //Change the password
         $hash=password_hash($password, PASSWORD_DEFAULT);
         $changePasswd = 'UPDATE User SET Password=? WHERE UserID=?';

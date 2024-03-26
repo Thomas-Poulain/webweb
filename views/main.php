@@ -22,7 +22,7 @@
             <th id="home"><a href="index.php">Home</a></th>
             <th id="about"><a href="about.php">About</a></th>
             <th id="contact"><a href="contact.php">Contact us</a></th>
-            <th id="connect"><?php echo isset($_SESSION['username']) ? '<a href="disconnect.php">Logout</a>' : '<a href="#" onclick="loginShowHide()">Connect</a>'; ?></th>
+            <th id="connect"><?php echo isset($_SESSION['username']) ? '<a href="/disconnect">Logout</a>' : '<a href="#" onclick="loginShowHide()">Connect</a>'; ?></th>
         </tr>
     </table>
 </nav>

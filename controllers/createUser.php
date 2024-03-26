@@ -7,7 +7,7 @@ class CreateUserController extends Controller{
      * Get the page to create a user
      */
     public function get($request){
-        $this->render('/main',[]);
+        $this->render('/main',[]);                                                                      
     }
 
     /**
