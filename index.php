@@ -6,7 +6,6 @@ require_once (__ROOT__.'/config.php');
 //paramètrage de lax session
 if (!isset($_SESSION)){
     session_start();
-    setcookie("session_id", session_id(), time()+3600, "/");
 }
 
 // Configuration
