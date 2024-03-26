@@ -21,7 +21,6 @@ class ConnectController extends Controller{
 
         try{
             $request_PDO = new request_PDO();
-            echo $username;
             $result = $request_PDO->connect($username, $password);
             if($result){
                 $_SESSION['username'] = $username;

@@ -21,7 +21,7 @@ class request_PDO{
         $connect->bindParam(1,$username);
         $connect->execute();
         $result = $connect->fetch();
-        return password_verify($password, $result['password']);
+        return password_verify(password_hash($password, PASSWORD_DEFAULT), $result['password']);
     }
 
     /**

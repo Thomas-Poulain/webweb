@@ -19,7 +19,7 @@ $connect->execute();
 $firstName="TEST";
 $lastName="TEST";
 $email = "n@n.com";
-$password="ntbmg";
+$password="nbtmg";
 $hash=password_hash($password, PASSWORD_DEFAULT);
 $add = "INSERT INTO User(FirstName,LastName,email,Password) VALUES (?,?,?,?)";
 $add = $db->prepare($add);
