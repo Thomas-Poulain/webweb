@@ -43,7 +43,7 @@ class request_PDO{
 
         //Add the user
         $hash=password_hash($password, PASSWORD_DEFAULT);
-        $add = "INSERT INTO User(FirstName,LastName,email,Password) VALUES (?,?,?,?)";
+        $add = 'INSERT INTO User(FirstName,LastName,email,Password) VALUES (?,?,?,?)';
         $add = $this->db->prepare($add);
         $add->execute([$firstName,$lastName,$email,$hash]);
     }
@@ -53,9 +53,20 @@ class request_PDO{
      * @param $id : the id of the user
      * @param $password : the new password of the user
      */
-    public function changePassword($id, $password){
+    public function changePassword($email, $password){
+        //Get the id of the user
+        $id = $this->db->prepare('SELECT UserID FROM User WHERE email=?');
+        $id->bindParam(1,$email);
+        $id->execute();
+
+        if(!$id){
+            echo "User not found";
+            return;
+        }
+        
+        //Change the password
         $hash=password_hash($password, PASSWORD_DEFAULT);
-        $changePasswd = "UPDATE User SET Password=? WHERE UserID=?";
+        $changePasswd = 'UPDATE User SET Password=? WHERE UserID=?';
         $changePasswd = $this->db->prepare($changePasswd);
         $changePasswd->execute([$hash,$id]);
     }

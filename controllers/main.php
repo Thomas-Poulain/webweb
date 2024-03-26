@@ -11,6 +11,12 @@ class MainController extends Controller{
         //persistant connection
         $this->render('main',[]);
     }
+
+    /**
+     * Post the main page
+     * @param $request
+     */
+    public function post($request){}
 }
 ?>
 

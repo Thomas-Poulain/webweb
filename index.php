@@ -19,7 +19,10 @@ require_once (CONTROLLERS_DIR.'/ApplicationController.php');
 // Add routes here
 ApplicationController::getInstance()->addRoute('connect', CONTROLLERS_DIR.'/connect.php');
 ApplicationController::getInstance()->addRoute('disconnect', CONTROLLERS_DIR.'/disconnect.php');
-ApplicationController::getInstance()->addRoute('createUser', CONTROLLERS_DIR.'/CreateUser.php');
+ApplicationController::getInstance()->addRoute('createUser', CONTROLLERS_DIR.'/createUser.php');
+ApplicationController::getInstance()->addRoute('resetPassword', CONTROLLERS_DIR.'/resetPassword.php');
+ApplicationController::getInstance()->addRoute('main', CONTROLLERS_DIR.'/main.php');
+
 
 // Process the request
 ApplicationController::getInstance()->process();
