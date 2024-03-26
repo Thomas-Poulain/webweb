@@ -1,6 +1,7 @@
 <?php
 ini_set('display_errors', 'On');
 define ("__ROOT__",__DIR__);
+require_once (__ROOT__.'/config.php');
 
 //paramètrage de lax session
 if (!isset($_SESSION)){
@@ -10,7 +11,7 @@ if (!isset($_SESSION)){
 
 // Configuration
 require (MODEL_DIR.'/user.php');
-require_once (__ROOT__.'/config.php');
+require (MODEL_DIR.'/request_PDO.php');
 
 // ApplicationController
 require_once (CONTROLLERS_DIR.'/ApplicationController.php');

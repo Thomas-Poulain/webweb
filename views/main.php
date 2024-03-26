@@ -9,7 +9,7 @@
     <meta name="keywords" content="Un, Ours">
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="Cache-Control" content="no-cache">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="views/css/style.css">
 </head>
 <body>
 <header>
@@ -30,33 +30,32 @@
 <div id="form-background" onclick="loginShowHide()"></div>
 
 <?php
-session_start();
 
 if (isset($_SESSION['username'])) {
     echo "<p>Welcome back, {$_SESSION['username']}!</p>";
 } else {
     echo "<form id=\"login\" class=\"connect-button-forms\" action=\"connect\" method=\"post\">
             <h1>Welcome back.</h1>
-            <input id=\"log-login\" type=\"text\" name=\"username\" placeholder=\"Username\">
-            <input id=\"log-pass\" type=\"password\" name=\"password\" placeholder=\"Password\">
+            <input id=\"log-login\" type=\"text\" name=\"username\" placeholder=\"Username\" required>
+            <input id=\"log-pass\" type=\"password\" name=\"password\" placeholder=\"Password\" required>
             <p onclick=\"swapForms()\">Become Un ours.</p>
             <button type=\"submit\">Login</button>
           </form>
 
-          <form id=\"register\" class=\"connect-button-forms\" action=\"connect\" method=\"post\">
+          <form id=\"register\" class=\"connect-button-forms\" action=\"createUser\" method=\"post\">
             <h1>Welcome.</h1>
-            <input id=\"reg-prenom\" type=\"text\" name=\"firstname\" placeholder=\"First name\">
-            <input id=\"reg-nom\" type=\"text\" name=\"lastname\" placeholder=\"Last name\">
-            <input id=\"reg-login\" type=\"text\" name=\"username\" placeholder=\"Username\">
-            <input id=\"reg-pass\" type=\"password\" name=\"password\" placeholder=\"Password\">
-            <input id=\"reg-conf-pass\" type=\"password\" name=\"confirm_password\" placeholder=\"Confirm password\">
+            <input id=\"reg-email\" type=\"email\" name=\"username\" placeholder=\"Email\" required>
+            <input id=\"reg-prenom\" type=\"text\" name=\"firstname\" placeholder=\"First name\" required>
+            <input id=\"reg-nom\" type=\"text\" name=\"lastname\" placeholder=\"Last name\" required>
+            <input id=\"reg-pass\" type=\"password\" name=\"password\" placeholder=\"Password\" required>
+            <input id=\"reg-conf-pass\" type=\"password\" name=\"confirm_password\" placeholder=\"Confirm password\" required>
             <p onclick=\"swapForms()\">Already Un ours ??</p>
             <button type=\"submit\">Register</button>
           </form>";
 }
 ?>
 
-<img id="background" src="med/ours.jpg" alt="Background for the main display">
+<img id="background" src="views/med/ours.jpg" alt="Background for the main display">
 
 <main>
     <div id="text-main-display">
@@ -85,5 +84,5 @@ if (isset($_SESSION['username'])) {
 <footer> </footer>
 
 </body>
-<script src="../controller/script.js"></script>
+<script src="views/js/script.js"></script>
 </html>

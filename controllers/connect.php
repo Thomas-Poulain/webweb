@@ -20,13 +20,15 @@ class ConnectController extends Controller{
         $password = $request['password'];
 
         try{
-            $db = new PDO('sqlite:base.db');
-            $stmt = $db->prepare('SELECT password FROM users WHERE username = :username');
-            $stmt->bindParam(':username', $username);
-            $result = $stmt->execute();
-
-            var_dump($result);
-            password_verify($password, $result['password']);
+            $request_PDO = new request_PDO();
+            echo $username;
+            $result = $request_PDO->connect($username, $password);
+            if($result){
+                $_SESSION['username'] = $username;
+            }else{
+                echo "Bad credentials";
+            }
+            $this->render('/main',[]);
             
         } catch(PDOException $e){
             echo $e->getMessage();
