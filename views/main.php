@@ -25,7 +25,6 @@
                         <th id=\"home\"><a href=\"index.php\">Home</a></th>
                         <th id=\"about\"><a href=\"about.php\">About</a></th>
                         <th id=\"contact\"><a href=\"contact.php\">Contact us</a></th>
-                        <th id=\"ChangePasswd\"><a href=\"#\">MDP Oublié</a></th>
                         <th id=\"connect\"><a href=\"/disconnect\">Logout</a></th>
                     </tr>
                 </table>
@@ -139,9 +138,9 @@ if (isset($_SESSION['username'])) {
                 <p>56000 Vannes</p>
                 <p>France</p>
                 <section id="icons">
-                    <img class="icon" src="images/facebook.png">
-                    <img class="icon" src="images/discord.png">
-                    <img class="icon" src="images/linkedin.png">
+                    <img class="icon" src="views/med/facebook.png">
+                    <img class="icon" src="views/med/discord.png">
+                    <img class="icon" src="views/med/linkedin.png">
                 </section>
             </section>
         </aside>

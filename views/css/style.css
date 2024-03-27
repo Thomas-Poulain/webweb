@@ -5,6 +5,8 @@ html{
     left: 0;
     padding-left: 0%;
     padding-right: 0%;
+    max-height: 100vh;
+    height: fit-content;
     margin: 0%;
     width: 99vw;
 }
@@ -45,7 +47,7 @@ header {
 }
 
 nav{
-    left: 50vw;
+    left: 55vw;
     width:100vw;
 }
 
@@ -76,18 +78,15 @@ nav table th:hover {
     opacity: 95%;
 }
 
-main, footer{
+main{
     z-index: 5;
     position: relative;
     width: 90vw;
-    left: 4.5vw;
-    box-shadow: 1.5vh 1vh 5vh rgba(0, 0, 0, 0.5);
-}
-
-main{
     top: -20vh;
     height: 190vh;
     background-color: white;
+    left: 4.5vw;
+    box-shadow: 1.5vh 1vh 5vh rgba(0, 0, 0, 0.5);
 }
 
 #text-main-display{
@@ -131,8 +130,14 @@ from, to { border-color: transparent }
 
 }
 
-main section, main aside{
-    top:-26.5vh;
+main section {
+    top:-20vh;
+    position: relative;
+    height: 50vh;
+}
+
+main aside{
+    top:-18vh;
     position: relative;
     height: 50vh;
 }
@@ -229,18 +234,18 @@ button {
 
 /***************FOOTER*******************/
 footer{
-    background-color: #242031;
-    padding: 1%;
+    z-index: 5;
     color: white;
-    max-width: 60%;
-    margin: 0 auto;
- }
- 
- #infos{
-     display: flex;
- }
- 
- #footerTitle{
+    text-align: center;
+    background-color: #242031;
+    position: relative;
+    width: 90vw;
+    left: 4.5vw;
+    top: -50vh;
+    box-shadow: 1.5vh 1vh 5vh rgba(0, 0, 0, 0.5);
+}
+
+ #infos, .icons{
      display: flex;
  }
  
@@ -279,13 +284,4 @@ footer{
  .icon{
      width: 10%;
      height: 10%;
- }
- 
- .icons{
-     display: flex;
- }
- 
- #subtitle{
-     margin-top: 28px;
-     margin-left: 15px;
  }
