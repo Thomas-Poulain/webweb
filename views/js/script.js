@@ -34,6 +34,6 @@ function swapForms(){
 function displayChangePass(){
     chgPass.style.display = formBg.style.display = "block"
     chgPassVisible = true
-    loginForm.style.display = regForm.style.display = chgPass.style.display = "none"
+    loginForm.style.display = regForm.style.display = "none"
     loginVisible = registerVisible = false 
 }
