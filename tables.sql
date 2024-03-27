@@ -7,7 +7,7 @@ CREATE TABLE User(
     RegistrationDate DEFAULT CURRENT_TIMESTAMP
 );
 CREATE TABLE Ressource (
-    RessourceID INT AUTO_INCREMENT PRIMARY KEY,
+    RessourceID INTEGER PRIMARY KEY AUTOINCREMENT,
     RessourceName VARCHAR(50),
     RessourceType VARCHAR(10),
     RessourcePath VARCHAR(1000),
@@ -17,7 +17,7 @@ CREATE TABLE Ressource (
     FOREIGN KEY (RessourceAuthorID) REFERENCES User(UserID)
 );
 CREATE TABLE Messages(
-    MessageID INT AUTO_INCREMENT PRIMARY KEY,
+    MessageID INTEGER PRIMARY KEY AUTOINCREMENT,
     ExpeditorName VARCHAR(50),
     ExpeditorFirstName VARCHAR(50),
     ExpeditorLastName VARCHAR(50),

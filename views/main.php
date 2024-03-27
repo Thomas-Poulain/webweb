@@ -116,10 +116,10 @@ if (isset($_SESSION['username'])) {
             <section class="footerSection">
                 <h3>Navigation</h3>
                 <ul class="ulFooter">
-                    <li class="listFooter"><a href="index.html">Home</a></li>
+                    <li class="listFooter"><a href="#">Home</a></li>
                     <li class="listFooter"><a href="#">About</a></li>
-                    <li class="listFooter"><a href="contact.html">Contact us</a></li>
-                    <li class="listFooter"><a onclick="showHide()" href="#">Connect</a></li>
+                    <li class="listFooter"><a href="#">Contact us</a></li>
+                    <li class="listFooter"><a href="#">Connect</a></li>
                 </ul>
             </section>
 
@@ -147,7 +147,7 @@ if (isset($_SESSION['username'])) {
 
         <hr id="hrFooter">
         <aside>
-            <span id="end1">Created by Matthieu Hyeans. All rigth reserved</span>
+            <span id="end1">Created by Poulain Thomas / Jamet Titouan / HYEANS Matthieu. All rigth reserved</span>
             <span id="end2">Terms of service</span>
         </aside>
     </footer>
