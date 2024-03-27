@@ -107,7 +107,51 @@ if (isset($_SESSION['username'])) {
     </aside>
 </main>
 
-<footer> </footer>
+<footer>
+        <aside id="footerTitle">
+            <h1>Les Ours</h1>
+            <h5 id="subtitle">Force de l'ours, douceur du cœur.</h5>
+        </aside>
+
+        <aside id="infos">
+            <section class="footerSection">
+                <h3>Navigation</h3>
+                <ul class="ulFooter">
+                    <li class="listFooter"><a href="index.html">Home</a></li>
+                    <li class="listFooter"><a href="#">About</a></li>
+                    <li class="listFooter"><a href="contact.html">Contact us</a></li>
+                    <li class="listFooter"><a onclick="showHide()" href="#">Connect</a></li>
+                </ul>
+            </section>
+
+            <section class="footerSection">
+                <h3>Partenaires</h3>
+                <ul class="ulFooter">
+                    <li class="listFooter"><a href="#">Lien partenaire 1</a></li>
+                    <li class="listFooter"><a href="#">Lien partenaire 2</a></li>
+                    <li class="listFooter"><a href="#">Lien partenaire 3</a></li>
+                </ul>
+            </section>
+
+            <section class="footerSection">
+                <h3 id="contactTitle">Contact</h3>
+                <p>00 Avenue road</p>
+                <p>56000 Vannes</p>
+                <p>France</p>
+                <section id="icons">
+                    <img class="icon" src="images/facebook.png">
+                    <img class="icon" src="images/discord.png">
+                    <img class="icon" src="images/linkedin.png">
+                </section>
+            </section>
+        </aside>
+
+        <hr id="hrFooter">
+        <aside>
+            <span id="end1">Created by Matthieu Hyeans. All rigth reserved</span>
+            <span id="end2">Terms of service</span>
+        </aside>
+    </footer>
 
 </body>
 <script src="views/js/script.js"></script>
