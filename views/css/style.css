@@ -229,8 +229,63 @@ button {
 
 /***************FOOTER*******************/
 footer{
-    position: relative;
-    top: -55vh;
-    height: 35vh;
     background-color: #242031;
-}
+    padding: 1%;
+    color: white;
+    max-width: 60%;
+    margin: 0 auto;
+ }
+ 
+ #infos{
+     display: flex;
+ }
+ 
+ #footerTitle{
+     display: flex;
+ }
+ 
+ .footerSection{
+     width: 80%;
+     padding-left: 2%;
+ }
+ 
+ #contactTitle{
+     text-align: center;
+ }
+ 
+ .ulFooter{
+    list-style-type: none;
+ }
+ 
+ #hrFooter{
+     color: orange;
+     width: 95%;
+ }
+ 
+ #end1{
+     padding-left: 5%;
+ }
+ 
+ #end2{
+     float: right;
+     padding-right: 5%;
+ }
+ 
+ .listFooter a {
+     color: white;
+     text-decoration: none;
+ }
+ 
+ .icon{
+     width: 10%;
+     height: 10%;
+ }
+ 
+ .icons{
+     display: flex;
+ }
+ 
+ #subtitle{
+     margin-top: 28px;
+     margin-left: 15px;
+ }
