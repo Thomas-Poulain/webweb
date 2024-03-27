@@ -16,16 +16,22 @@ class resetPasswordController extends Controller{
      */
     public function post($request){
         // Récupération de l'utilisateur
-        $username = $request['username'];
+        $email = $request['email'];
         $password = $request['password'];
+        $confirm_password = $request['confirm_password'];
 
-        try{
-            $request_PDO = new request_PDO();
-            $result = $request_PDO->changePassword($username, $password);
-            $this->render('/main',[]);
-            
-        } catch(PDOException $e){
-            echo $e->getMessage();
+        if($password != $confirm_password){
+            echo "Les mots de passe ne correspondent pas";
+
+        }else{
+            try{
+                $request_PDO = new request_PDO();
+                $result = $request_PDO->changePassword($email, $password);
+                $this->render('/main',[]);
+                
+            } catch(PDOException $e){
+                echo $e->getMessage();
+            }
         }
     }
 }

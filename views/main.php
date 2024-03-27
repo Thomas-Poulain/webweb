@@ -53,7 +53,7 @@ if (isset($_SESSION['username'])) {
 } else {
     echo "<form id=\"login\" class=\"connect-button-forms\" action=\"connect\" method=\"post\">
             <h1>Welcome back.</h1>
-            <input id=\"log-login\" type=\"text\" name=\"username\" placeholder=\"Username\" required>
+            <input id=\"log-login\" type=\"text\" name=\"username\" placeholder=\"email\" required>
             <input id=\"log-pass\" type=\"password\" name=\"password\" placeholder=\"Password\" required>
             <p onclick=\"swapForms()\">Create an account.</p>
             <p onclick=\"displayChangePass()\">Change password.</p>
@@ -71,7 +71,7 @@ if (isset($_SESSION['username'])) {
             <button type=\"submit\">Register</button>
           </form>;
 
-          <form id=\"chgPass\" class=\"connect-button-forms\" action=\"connect\" method=\"post\">
+          <form id=\"chgPass\" class=\"connect-button-forms\" action=\"resetPassword\" method=\"post\">
             <h1>New password.</h1>
             <input id=\"reg-email\" type=\"email\" name=\"email\" placeholder=\"Enter your mail\" required>
             <input id=\"log-pass\" type=\"password\" name=\"password\" placeholder=\"New password\" required>

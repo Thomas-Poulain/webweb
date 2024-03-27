@@ -58,21 +58,10 @@ class request_PDO{
      * @param $password : the new password of the user
      */
     public function changePassword($email, $password){
-        //Get the id of the user
-        $id = $this->db->prepare('SELECT UserID FROM User WHERE email=?');
-        $id->bindParam(1,$email);
-        $id->execute();
-
-        if(!$id){
-            echo "User not found";
-            return;
-        }
-
-        //Change the password
         $hash=password_hash($password, PASSWORD_DEFAULT);
-        $changePasswd = 'UPDATE User SET Password=? WHERE UserID=?';
+        $changePasswd = 'UPDATE User SET PASSWORD=? WHERE email=?';
         $changePasswd = $this->db->prepare($changePasswd);
-        $changePasswd->execute([$hash,$id]);
+        $changePasswd->execute([$hash,$email]);
     }
 }
 
