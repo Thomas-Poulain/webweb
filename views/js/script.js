@@ -1,8 +1,10 @@
 var loginVisible = false
 var registerVisible = false
+var chgPassVisible = false
 var formBg = document.getElementById("form-background")
 var regForm = document.getElementById("register")
 var loginForm = document.getElementById("login")
+var chgPass = document.getElementById("chgPass")
     
 
 function loginShowHide(){
@@ -10,8 +12,8 @@ function loginShowHide(){
         loginForm.style.display = formBg.style.display = "block"
         loginVisible = true
     } else {
-        loginForm.style.display = regForm.style.display = formBg.style.display = "none"
-        loginVisible = registerVisible = false
+        loginForm.style.display = regForm.style.display = formBg.style.display = chgPass.style.display = "none"
+        loginVisible = registerVisible = chgPassVisible = false
     }
 }
 
@@ -27,5 +29,11 @@ function swapForms(){
         loginForm.style.display = "block"
         loginVisible = !loginVisible
     }
-    
+}
+
+function displayChangePass(){
+    chgPass.style.display = formBg.style.display = "block"
+    chgPassVisible = true
+    loginForm.style.display = regForm.style.display = chgPass.style.display = "none"
+    loginVisible = registerVisible = false 
 }

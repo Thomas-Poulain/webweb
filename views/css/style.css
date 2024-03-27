@@ -214,7 +214,7 @@ button {
     padding: 10px 10px;
 }
 
-#login{
+#login, #chgPass{
     top: 30vh;
     left: 29vw;
     display: none;

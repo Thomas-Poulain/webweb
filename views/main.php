@@ -55,7 +55,8 @@ if (isset($_SESSION['username'])) {
             <h1>Welcome back.</h1>
             <input id=\"log-login\" type=\"text\" name=\"username\" placeholder=\"Username\" required>
             <input id=\"log-pass\" type=\"password\" name=\"password\" placeholder=\"Password\" required>
-            <p onclick=\"swapForms()\">Become Un ours.</p>
+            <p onclick=\"swapForms()\">Create an account.</p>
+            <p onclick=\"displayChangePass()\">Change password.</p>
             <button type=\"submit\">Login</button>
           </form>
 
@@ -66,8 +67,16 @@ if (isset($_SESSION['username'])) {
             <input id=\"reg-nom\" type=\"text\" name=\"lastname\" placeholder=\"Last name\" required>
             <input id=\"reg-pass\" type=\"password\" name=\"password\" placeholder=\"Password\" required>
             <input id=\"reg-conf-pass\" type=\"password\" name=\"confirm_password\" placeholder=\"Confirm password\" required>
-            <p onclick=\"swapForms()\">Already Un ours ??</p>
+            <p onclick=\"swapForms()\">Already an account</p>
             <button type=\"submit\">Register</button>
+          </form>;
+
+          <form id=\"chgPass\" class=\"connect-button-forms\" action=\"connect\" method=\"post\">
+            <h1>New password.</h1>
+            <input id=\"reg-email\" type=\"email\" name=\"email\" placeholder=\"Enter your mail\" required>
+            <input id=\"log-pass\" type=\"password\" name=\"password\" placeholder=\"New password\" required>
+            <input id=\"reg-conf-pass\" type=\"password\" name=\"confirm_password\" placeholder=\"Confirm new password\" required>
+            <button type=\"submit\">Validate</button>
           </form>";
 }
 ?>
