@@ -4,6 +4,13 @@ class ApplicationController{
     private $routes;
 
     /**
+     * Jamet Titouan
+     * Poulain Thomas
+     * Hyeans Matthieu
+     * Testé sur Firefox
+     */
+
+    /**
      * Constructor of the class.
      */
     private function __construct(){

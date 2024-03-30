@@ -1,5 +1,12 @@
 <?php
 /**
+* Jamet Titouan
+* Poulain Thomas
+* Hyeans Matthieu
+* Testé sur Firefox
+*/
+
+/**
  * Classe abstraite qui est étendue par les contrôleurs pour traiter
  * les requêtes HTTP POST, GET, ...
  */

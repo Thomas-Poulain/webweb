@@ -1,4 +1,10 @@
 <?php
+/**
+* Jamet Titouan
+* Poulain Thomas
+* Hyeans Matthieu
+* Testé sur Firefox
+*/
 require(__ROOT__.'/controllers/Controller.php');
 require(__ROOT__.'/controllers/connect.php');
 class MainController extends Controller{

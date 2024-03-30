@@ -1,4 +1,10 @@
 <?php
+/**
+* Jamet Titouan
+* Poulain Thomas
+* Hyeans Matthieu
+* Testé sur Firefox
+*/
 class User {
 
     private int $id;

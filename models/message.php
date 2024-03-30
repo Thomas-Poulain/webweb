@@ -1,5 +1,10 @@
 <?php
-
+/**
+* Jamet Titouan
+* Poulain Thomas
+* Hyeans Matthieu
+* Testé sur Firefox
+*/
 class Message{
     private int $id;
     private string $expeditorLogin;

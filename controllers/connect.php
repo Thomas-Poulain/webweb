@@ -1,4 +1,10 @@
 <?php
+/**
+* Jamet Titouan
+* Poulain Thomas
+* Hyeans Matthieu
+* Testé sur Firefox
+*/
 require_once(__ROOT__.'/controllers/Controller.php');
 
 class ConnectController extends Controller{

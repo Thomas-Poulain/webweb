@@ -1,4 +1,9 @@
-<!--Titouan JAMET - GrTP6 - Navigateur utilisé: Opera-->
+   <!--
+    Jamet Titouan
+    Poulain Thomas
+    Hyeans Matthieu
+    Testé sur Firefox
+    -->
 <!DOCTYPE html>
 <html>
     <head>

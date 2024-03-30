@@ -1,5 +1,10 @@
 <?php
-
+/**
+* Jamet Titouan
+* Poulain Thomas
+* Hyeans Matthieu
+* Testé sur Firefox
+*/
 class request_PDO{
 
     //utilisation de php-sqlite3 (apt install php-sqlite3)
