@@ -6,7 +6,7 @@
 * Testé sur Firefox
 */
 require(__ROOT__.'/controllers/Controller.php');
-class MainController extends Controller{
+class ContactController extends Controller{
 
     /**
      * Get method
@@ -14,7 +14,7 @@ class MainController extends Controller{
      */
     public function get($request){
         //persistant connection
-        $this->render('main',[]);
+        $this->render('contact',[]);
     }
 
     /**
@@ -24,4 +24,3 @@ class MainController extends Controller{
     public function post($request){}
 }
 ?>
-

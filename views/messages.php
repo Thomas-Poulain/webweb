@@ -25,8 +25,8 @@
             <table>
                 <tr>
                     <th id="home"><a href="/">Home</a></th>
-                    <th id="about"><a href="/views/about.php">About</a></th>
-                    <th id="contact"><a href="/views/contact.html">Contact us</a></th>
+                    <th id="about"><a href="about">About</a></th>
+                    <th id="contact"><a href="contact">Contact us</a></th>
                     <th id="connect" onclick="loginShowHide()">Connect</th>
                 </tr>
             </table>

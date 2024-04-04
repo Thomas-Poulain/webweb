@@ -7,17 +7,18 @@
 */
 require_once(__ROOT__.'/controllers/Controller.php');
 
-class ConnectController extends Controller{
+class QuizController extends Controller{
 
     /**
-     * Get the page to connect
+     * Get method
+     * @param $request
      */
     public function get($request){
-        $this->render('/quiz',[]);
+        $this->render('quiz',[]);
     }
 
     /**
-     * Connect the user
+     * Post method
      * @param $request
      */
     public function post($request){

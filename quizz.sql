@@ -17,8 +17,6 @@ CREATE TABLE Attempt (
 CREATE TABLE Question(
     QuestionID INTEGER PRIMARY KEY AUTOINCREMENT,
     QuestionText VARCHAR(1000),
-    QuestionType VARCHAR(10) CHECK(QuestionType IN ('info', 'quizz')),
-    NbrTrueResponses INT,
     AttemptID INT,
     FOREIGN KEY (AttemptID) REFERENCES Attempt(AttemptID)
 );
@@ -26,7 +24,6 @@ CREATE TABLE Question(
 CREATE TABLE Response (
     ResponseID INTEGER PRIMARY KEY AUTOINCREMENT,
     ResponseText VARCHAR(1000),
-    IsTrue BOOLEAN,
     QuestionID INT,
     FOREIGN KEY (QuestionID) REFERENCES Question(QuestionID)
 );
