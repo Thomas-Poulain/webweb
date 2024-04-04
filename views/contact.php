@@ -14,7 +14,7 @@
         <meta name="keywords" content="Un, Ours">
         <meta name="viewport" content="width=device-width">
         <meta http-equiv="Cache-Control" content="no-cache">    
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="/views/css/style.css">
     </head>
     <body>
         <header>
