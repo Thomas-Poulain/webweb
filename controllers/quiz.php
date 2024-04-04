@@ -31,32 +31,86 @@ class QuizController extends Controller{
         $q5 = $request['q4'];
         $q6 = $request['q5'];
 
+        $VisitorIP = $_SERVER['REMOTE_ADDR'];
+        $VisitorAge = $request['age'];
+        $VisitorRegion = $request['region'];
+        $VisitorDiscipline = $request['discipline'];
+
+        if(isset($_SESSION['username'])){
+            $ClientID = $_SESSION['username'];
+            $VisitorIsClient = True;
+            $ClientID = $_SESSION['username'];
+        }else{
+            $VisitorIsClient = False;
+            $ClientID = NULL;
+        }
+
+        // Réponses aux questions
         $response = ['B', 'B', 'B', ['A', 'B', 'C'], 'A', ['A','C']];
+
+        // Récupération des réponses
+        $request_PDO = new request_PDO();
+
+        // Récupération du score
+        $score = $this->getScore($request);
+        $attempsID = $request_PDO->attemps($score,$VisitorIP,$VisitorAge,$VisitorRegion,$VisitorDiscipline,$VisitorIsClient,$ClientID);
 
         for ($i = 1; $i <= count($request); $i++) {
             $reponseTMP = $response[$i-1];
             $requestTMP = $request['q'.$i];
 
+            // Si la question est une question à choix multiple
             if (is_array($reponseTMP)) {
+                $allGood = true;
                 for ($j = 0; $j < count($reponseTMP); $j++) {
-                    if ($reponseTMP[$j] == $requestTMP[$j]) {
-                        $score++;
+                    if ($reponseTMP[$j] != $requestTMP[$j]) {
+                        $allGood = false;
                     }
                 }
+                if ($allGood) {
+                    $score++;
+                }
+                response($attempsID,$requestTMP,$reponseTMP);
+            // si la question est une question à choix unique
+            } else{
+                if ($reponseTMP == $requestTMP) {
+                    $score++;
+                }
+                response($attempsID,$requestTMP,$reponseTMP);
+            }
+        }
+        $this->render('quiz',[$score]);
+    }
+
+    /**
+     * Get the score of the user
+     * @param $request
+     */
+    public function getScore($request){
+        for ($i = 1; $i <= count($request); $i++) {
+            $reponseTMP = $response[$i-1];
+            $requestTMP = $request['q'.$i];
+
+            // Si la question est une question à choix multiple
+            if (is_array($reponseTMP)) {
+                $allGood = true;
+                for ($j = 0; $j < count($reponseTMP); $j++) {
+                    if ($reponseTMP[$j] != $requestTMP[$j]) {
+                        $allGood = false;
+                    }
+                }
+                if ($allGood) {
+                    $score++;
+                }
+
+            // si la question est une question à choix unique
             } else{
                 if ($reponseTMP == $requestTMP) {
                     $score++;
                 }
             }
         }
-
-        
-        try{
-            $this->render('/main',[]);
-            
-        } catch(PDOException $e){
-            echo $e->getMessage();
-        }
+        return $score;
     }
 }
 ?>
