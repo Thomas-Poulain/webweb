@@ -14,7 +14,7 @@
         <meta name="keywords" content="Un, Ours">
         <meta name="viewport" content="width=device-width">
         <meta http-equiv="Cache-Control" content="no-cache">    
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="/views/css/style.css">
     </head>
     <body>
         <header>
@@ -24,9 +24,9 @@
         <nav>
             <table>
                 <tr>
-                    <th id="home"><a href="index.html">Home</a></th>
-                    <th id="about"><a href="index.html">About</a></th>
-                    <th id="contact"><a href="contact.html">Contact us</a></th>
+                    <th id="home"><a href="/">Home</a></th>
+                    <th id="about"><a href="/views/about.php">About</a></th>
+                    <th id="contact"><a href="/views/contact.html">Contact us</a></th>
                     <th id="connect" onclick="loginShowHide()">Connect</th>
                 </tr>
             </table>
