@@ -28,8 +28,8 @@
                 <table>
                     <tr>
                         <th id=\"home\"><a href=\"/\">Home</a></th>
-                        <th id=\"about\"><a href=\"about.php\">About</a></th>
-                        <th id=\"contact\"><a href=\"contact.php\">Contact us</a></th>
+                        <th id=\"about\"><a href=\"about\">About</a></th>
+                        <th id=\"contact\"><a href=\"contact\">Contact us</a></th>
                         <th id=\"connect\"><a href=\"disconnect\">Logout</a></th>
                     </tr>
                 </table>
@@ -39,9 +39,9 @@
                 <table>
                     <tr>
                         <th id=\"home\"><a href=\"/\">Home</a></th>
-                        <th id=\"about\"><a href=\"about.php\">About</a></th>
-                        <th id=\"contact\"><a href=\"contact.php\">Contact us</a></th>
-                        <th id=\"quiz\"><a href=\"quiz.php\">Quiz</a></th>
+                        <th id=\"about\"><a href=\"about\">About</a></th>
+                        <th id=\"contact\"><a href=\"contact\">Contact us</a></th>
+                        <th id=\"quiz\"><a href=\"quiz\">Quiz</a></th>
                         <th id=\"connect\"><a href=\"#\" onclick=\"loginShowHide()\">Connect</a></th>
                     </tr>
                 </table>
