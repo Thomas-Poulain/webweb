@@ -41,6 +41,7 @@
                         <th id=\"home\"><a href=\"/\">Home</a></th>
                         <th id=\"about\"><a href=\"/views/about.php\">About</a></th>
                         <th id=\"contact\"><a href=\"/views/contact.php\">Contact us</a></th>
+                        <th id=\"quiz\"><a href=\"/views/quiz.php\">Quiz</a></th>
                         <th id=\"connect\"><a href=\"#\" onclick=\"loginShowHide()\">Connect</a></th>
                     </tr>
                 </table>
@@ -85,7 +86,7 @@ if (isset($_SESSION['username'])) {
 }
 ?>
 
-<img id="background" src="views/med/ours.jpg" alt="Background for the main display">
+<img id="background" src="/views/med/ours.jpg" alt="Background for the main display">
 
 <main>
     <div id="text-main-display">
@@ -143,9 +144,9 @@ if (isset($_SESSION['username'])) {
                 <p>56000 Vannes</p>
                 <p>France</p>
                 <section id="icons">
-                    <img class="icon" src="views/med/facebook.png">
-                    <img class="icon" src="views/med/discord.png">
-                    <img class="icon" src="views/med/linkedin.png">
+                    <img class="icon" src="/views/med/facebook.png">
+                    <img class="icon" src="/views/med/discord.png">
+                    <img class="icon" src="/views/med/linkedin.png">
                 </section>
             </section>
         </aside>
@@ -158,5 +159,5 @@ if (isset($_SESSION['username'])) {
     </footer>
 
 </body>
-<script src="views/js/script.js"></script>
+<script src="/views/js/script.js"></script>
 </html>
