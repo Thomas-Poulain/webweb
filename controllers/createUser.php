@@ -13,7 +13,7 @@ class CreateUserController extends Controller{
      * Get the page to create a user
      */
     public function get($request){
-        header('Location: /main');                                                                     
+        $this->render('/main',[]);                                                                      
     }
 
     /**
@@ -37,7 +37,7 @@ class CreateUserController extends Controller{
             $request_PDO = new request_PDO();
             $request_PDO->addUser($firstname, $lastname, $username, $password);
             $_SESSION['username'] = $username;
-            header('Location: /main');
+            $this->render('/main',[]);
             echo "User created";
         } catch(PDOException $e){
             echo $e->getMessage();
