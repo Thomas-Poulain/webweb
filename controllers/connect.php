@@ -13,7 +13,7 @@ class ConnectController extends Controller{
      * Get the page to connect
      */
     public function get($request){
-        header('Location: /main');
+        header('Location: /');
     }
 
     /**
