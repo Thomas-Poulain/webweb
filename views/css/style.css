@@ -301,3 +301,16 @@ footer{
     left: -16vw;
     top: 4.5vh;
  }
+
+  /*******************Contact*********************/
+
+  #contact {
+    top: 6vh;
+    left: 3vw;
+    height: 90vh;
+ }
+
+ #quizArea input{
+    left: -16vw;
+    top: 4.5vh;
+ }
