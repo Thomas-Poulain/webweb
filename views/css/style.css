@@ -47,7 +47,7 @@ header {
 }
 
 nav{
-    left: 55vw;
+    left: 45vw;
     width:100vw;
 }
 
@@ -83,7 +83,7 @@ main{
     position: relative;
     width: 90vw;
     top: -20vh;
-    height: 190vh;
+    height: fit-content;
     background-color: white;
     left: 4.5vw;
     box-shadow: 1.5vh 1vh 5vh rgba(0, 0, 0, 0.5);
@@ -96,9 +96,11 @@ main{
     left: 35vw;
     width: fit-content;
     text-align: center;
+    
 }
 
 #text-main-display h1{
+    
     width: fit-content;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     border-right: .15em solid white; /* The typwriter cursor */
@@ -284,4 +286,18 @@ footer{
  .icon{
      width: 10%;
      height: 10%;
+ }
+
+
+ /*******************QUIZ*********************/
+
+ #quizArea {
+    top: -3vh;
+    left: 3vw;
+    height: 280vh;
+ }
+
+ #quizArea input{
+    left: -16vw;
+    top: 4.5vh;
  }
