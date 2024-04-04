@@ -88,12 +88,7 @@ if (isset($_SESSION['username'])) {
 
 <img id="background" src="/views/med/ours.jpg" alt="Background for the main display">
 
-<main>
-    <div id="text-main-display">
-        <hr>
-        <h1>Quiz sur la cybersécurité</h1>
-        <hr>
-    </div>
+<main class="container">
     <section id="quizArea">
         <form id="quizForm">
             <div>
