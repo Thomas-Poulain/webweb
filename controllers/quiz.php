@@ -31,10 +31,10 @@ class QuizController extends Controller{
         $q5 = $request['q4'];
         $q6 = $request['q5'];
 
-        #$VisitorIP = $_SERVER['REMOTE_ADDR'];
-        #$VisitorAge = $request['age'];
-        #$VisitorRegion = $request['region'];
-        #$VisitorDiscipline = $request['discipline'];
+        $VisitorIP = $_SERVER['REMOTE_ADDR'];
+        $VisitorAge = $request['age'];
+        $VisitorRegion = $request['region'];
+        $VisitorDiscipline = $request['discipline'];
 
         if(isset($_SESSION['username'])){
             $ClientID = $_SESSION['username'];
