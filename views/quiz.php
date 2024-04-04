@@ -90,7 +90,7 @@ if (isset($_SESSION['username'])) {
 
 <main class="container">
     <section id="quizArea">
-        <form id="quizForm">
+        <form id="quizForm" action="quiz" method="post">
             <div>
                 <h2>Question 1: Qu'est-ce que le phishing ?</h2>
                 <label for="q1Option1"><input type="radio" id="q1Option1" name="q1" value="A">A. Un type de poisson</label><br>
@@ -111,24 +111,24 @@ if (isset($_SESSION['username'])) {
             </div>
             <div>
                 <h2>Question 4: Quelles sont les meilleures pratiques pour sécuriser un réseau Wi-Fi domestique ?</h2>
-                <label for="q4Option1"><input type="checkbox" id="q1Option1" name="q1" value="A">A. Utiliser un mot de passe fort pour le réseau Wi-Fi</label><br>
-                <label for="q4Option2"><input type="checkbox" id="q1Option2" name="q1" value="B">B. Activer le chiffrement WPA2 ou WPA3</label><br>
-                <label for="q4Option3"><input type="checkbox" id="q1Option3" name="q1" value="C">C. Masquer le SSID du réseau</label><br>
-                <label for="q4Option4"><input type="checkbox" id="q1Option4" name="q1" value="D">D. Activer le partage de fichiers publics sur tous les appareils connectés</label><br>
+                <label for="q4Option1"><input type="checkbox" id="q1Option1" name="q4" value="A">A. Utiliser un mot de passe fort pour le réseau Wi-Fi</label><br>
+                <label for="q4Option2"><input type="checkbox" id="q1Option2" name="q4" value="B">B. Activer le chiffrement WPA2 ou WPA3</label><br>
+                <label for="q4Option3"><input type="checkbox" id="q1Option3" name="q4" value="C">C. Masquer le SSID du réseau</label><br>
+                <label for="q4Option4"><input type="checkbox" id="q1Option4" name="q4" value="D">D. Activer le partage de fichiers publics sur tous les appareils connectés</label><br>
             </div>
             <div>
                 <h2>Question 5: Quels sont les risques liés à l'utilisation de réseaux Wi-Fi publics non sécurisés ?</h2>
-                <label for="q5Option1"><input type="checkbox" id="q2Option1" name="q2" value="A">A. Risque de vol d'informations personnelles</label><br>
-                <label for="q5Option2"><input type="checkbox" id="q2Option2" name="q2" value="B">B. Risque de devenir un super-héros</label><br>
-                <label for="q5Option3"><input type="checkbox" id="q2Option3" name="q2" value="C">C. Risque de trouver des trésors cachés</label><br>
-                <label for="q5Option4"><input type="checkbox" id="q2Option4" name="q2" value="D">D. Risque de recevoir des cadeaux gratuits</label><br>
+                <label for="q5Option1"><input type="checkbox" id="q2Option1" name="q5" value="A">A. Risque de vol d'informations personnelles</label><br>
+                <label for="q5Option2"><input type="checkbox" id="q2Option2" name="q5" value="B">B. Risque de devenir un super-héros</label><br>
+                <label for="q5Option3"><input type="checkbox" id="q2Option3" name="q5" value="C">C. Risque de trouver des trésors cachés</label><br>
+                <label for="q5Option4"><input type="checkbox" id="q2Option4" name="q5" value="D">D. Risque de recevoir des cadeaux gratuits</label><br>
             </div>
             <div>
                 <h2>Question 6: Quelles sont les mesures pour se protéger contre les attaques de phishing ?</h2>
-                <label for="q6Option1"><input type="checkbox" id="q3Option1" name="q3" value="A">A. Ne jamais cliquer sur des liens suspects dans les e-mails</label><br>
-                <label for="q6Option2"><input type="checkbox" id="q3Option2" name="q3" value="B">B. Donner toujours vos informations personnelles lorsque demandé par e-mail</label><br>
-                <label for="q6Option3"><input type="checkbox" id="q3Option3" name="q3" value="C">C. Vérifier l'URL du site Web avant de fournir des informations</label><br>
-                <label for="q6Option4"><input type="checkbox" id="q3Option4" name="q3" value="D">D. Répondre à toutes les questions posées dans l'e-mail sans vérification</label><br>
+                <label for="q6Option1"><input type="checkbox" id="q3Option1" name="q6" value="A">A. Ne jamais cliquer sur des liens suspects dans les e-mails</label><br>
+                <label for="q6Option2"><input type="checkbox" id="q3Option2" name="q6" value="B">B. Donner toujours vos informations personnelles lorsque demandé par e-mail</label><br>
+                <label for="q6Option3"><input type="checkbox" id="q3Option3" name="q6" value="C">C. Vérifier l'URL du site Web avant de fournir des informations</label><br>
+                <label for="q6Option4"><input type="checkbox" id="q3Option4" name="q6" value="D">D. Répondre à toutes les questions posées dans l'e-mail sans vérification</label><br>
             </div>
             <button type="submit">Soumettre</button>
         </form>

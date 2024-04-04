@@ -31,10 +31,10 @@ class QuizController extends Controller{
         $q5 = $request['q4'];
         $q6 = $request['q5'];
 
-        $VisitorIP = $_SERVER['REMOTE_ADDR'];
-        $VisitorAge = $request['age'];
-        $VisitorRegion = $request['region'];
-        $VisitorDiscipline = $request['discipline'];
+        #$VisitorIP = $_SERVER['REMOTE_ADDR'];
+        #$VisitorAge = $request['age'];
+        #$VisitorRegion = $request['region'];
+        #$VisitorDiscipline = $request['discipline'];
 
         if(isset($_SESSION['username'])){
             $ClientID = $_SESSION['username'];
@@ -52,7 +52,7 @@ class QuizController extends Controller{
         $request_PDO = new request_PDO();
 
         // Récupération du score
-        $score = $this->getScore($request);
+        $score = $this->getScore($request, $response);
         $attempsID = $request_PDO->attemps($score,$VisitorIP,$VisitorAge,$VisitorRegion,$VisitorDiscipline,$VisitorIsClient,$ClientID);
 
         for ($i = 1; $i <= count($request); $i++) {
@@ -86,7 +86,8 @@ class QuizController extends Controller{
      * Get the score of the user
      * @param $request
      */
-    public function getScore($request){
+    public function getScore($request, $response){
+        $score = 0;
         for ($i = 1; $i <= count($request); $i++) {
             $reponseTMP = $response[$i-1];
             $requestTMP = $request['q'.$i];
