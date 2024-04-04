@@ -13,7 +13,7 @@ class ConnectController extends Controller{
      * Get the page to connect
      */
     public function get($request){
-        $this->render('/main',[]);
+        header('Location: /main');
     }
 
     /**
@@ -33,7 +33,7 @@ class ConnectController extends Controller{
             }else{
                 echo "Bad credentials";
             }
-            $this->render('/main',[]);
+            header('Location: /main');
             
         } catch(PDOException $e){
             echo $e->getMessage();

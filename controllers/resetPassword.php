@@ -13,7 +13,7 @@ class resetPasswordController extends Controller{
      * Get the page to reset the password
      */
     public function get($request){
-        $this->render('/main',[]);
+        header('Location: /main');
     }
 
     /**
@@ -33,7 +33,7 @@ class resetPasswordController extends Controller{
             try{
                 $request_PDO = new request_PDO();
                 $result = $request_PDO->changePassword($email, $password);
-                $this->render('/main',[]);
+                header('Location: /main');
                 
             } catch(PDOException $e){
                 echo $e->getMessage();
