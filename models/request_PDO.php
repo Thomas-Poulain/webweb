@@ -14,6 +14,8 @@ class request_PDO{
         $this->db = new PDO('sqlite:database.db');
     }
 
+    private $questions=["Q1","Q2","Q3","Q4","Q5","Q6"];
+
     /**
      * Connect the user
      * @param $username : the email of the user
@@ -69,19 +71,28 @@ class request_PDO{
         $changePasswd->execute([$hash,$email]);
     }
 
-    public function response($AttemptScore,$VisitorIP,$VisitorAge,$VisitorRegion,$VisitorDiscipline,$VisitorIsClient,$ClientID,$QuestionText,$QuestionType,$NbrTrueResponses,$AttemptID,$ResponseText,$IsTrue,$QuestionID){
-    
+    public function response($id,$question,$reponses){
+
+        $question = 'INSERT INTO Question(QuestionText,AttempID) VALUES (?,?)';
+        $question = $this->db->prepare($question);
+        $question->execute([$QuestionText,$id]);
+
+        $dernierID=$db->prepare('SELECT COUNT(*) as count FROM Question');
+        $dernierID->execute();
+        $result=$dernierID->fetch();
+
+        foreach ($responses as $key => $value) {
+            $response = 'INSERT INTO Response(ResponseText,QuestionID) VALUES (?,?,?,?,?,?,?)';
+            $response = $this->db->prepare($response);
+            $response->execute([$ResponseText,$dernierID]); 
+        }
+    }
+
+    public function attemps($AttemptScore,$VisitorIP,$VisitorAge,$VisitorRegion,$VisitorDiscipline,$VisitorIsClient,$ClientID){
+
         $attempt = 'INSERT INTO Attempt(AttemptScore,VisitorIP,VisitorAge,VisitorRegion,VisitorDiscipline,VisitorIsClient,ClientID) VALUES (?,?,?,?,?,?,?)';
         $attempt = $this->db->prepare($attempt);
         $attempt->execute([$AttemptScore,$VisitorIP,$VisitorAge,$VisitorRegion,$VisitorDiscipline,$VisitorIsClient,$ClientID]);
-
-        $question = 'INSERT INTO Question(QuestionText,QuestionType,NbrTrueResponses,AttempID) VALUES (?,?,?,?,?,?,?)';
-        $question = $this->db->prepare($question);
-        $question->execute([$QuestionText,$QuestionType,$NbrTrueResponses,$AttemptID]);
-
-        $response = 'INSERT INTO Response(ResponseText,IsTrue,QuestionID) VALUES (?,?,?,?,?,?,?)';
-        $response = $this->db->prepare($response);
-        $response->execute([$ResponseText,$IsTrue,$QuestionID]);
     }
 }
 
