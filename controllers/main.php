@@ -15,7 +15,7 @@ class MainController extends Controller{
      */
     public function get($request){
         //persistant connection
-        header('Location: /main');
+        header('Location: /');
     }
 
     /**
