@@ -27,9 +27,9 @@
             echo "<nav>
                 <table>
                     <tr>
-                        <th id=\"home\"><a href=\"index.php\">Home</a></th>
-                        <th id=\"about\"><a href=\"about.php\">About</a></th>
-                        <th id=\"contact\"><a href=\"contact.php\">Contact us</a></th>
+                        <th id=\"home\"><a href=\"/\">Home</a></th>
+                        <th id=\"about\"><a href=\"/views/about.php\">About</a></th>
+                        <th id=\"contact\"><a href=\"/views/contact.php\">Contact us</a></th>
                         <th id=\"connect\"><a href=\"/disconnect\">Logout</a></th>
                     </tr>
                 </table>
