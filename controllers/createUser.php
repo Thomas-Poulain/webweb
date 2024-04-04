@@ -10,14 +10,15 @@ require(__ROOT__.'/controllers/Controller.php');
 class CreateUserController extends Controller{
 
     /**
-     * Get the page to create a user
+     * Get method
+     * @param $request
      */
     public function get($request){
-        $this->render('/main',[]);                                                                      
+        $this->render('main',[]);                                                                      
     }
 
     /**
-     * Post the page to create a user
+     * Post method
      * @param $request
      */
     public function post($request){
@@ -37,7 +38,7 @@ class CreateUserController extends Controller{
             $request_PDO = new request_PDO();
             $request_PDO->addUser($firstname, $lastname, $username, $password);
             $_SESSION['username'] = $username;
-            $this->render('/main',[]);
+            $this->render('main',[]);
             echo "User created";
         } catch(PDOException $e){
             echo $e->getMessage();
