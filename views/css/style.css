@@ -304,13 +304,13 @@ footer{
 
   /*******************Contact*********************/
 
-  #contact {
+  #contactArea {
     top: 6vh;
     left: 3vw;
     height: 90vh;
  }
 
- #quizArea input{
+ #contactArea input{
     left: -16vw;
     top: 4.5vh;
  }

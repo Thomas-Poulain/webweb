@@ -89,7 +89,7 @@ if (isset($_SESSION['username'])) {
 <img id="background" src="/views/med/ours.jpg" alt="Background for the main display">
 
 <main>
-    <form id="contact">
+    <form id="contactArea">
         <h1>Want to reach us ?</h1>
         <input id="cont-prenom" type="text" placeholder="First name">
         <input id="cont-nom" type="text" placeholder="Last name">
