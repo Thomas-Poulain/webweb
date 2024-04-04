@@ -13,7 +13,7 @@ class ConnectController extends Controller{
      * Get the page to connect
      */
     public function get($request){
-        $this->render('/main',[]);
+        $this->render('/quiz',[]);
     }
 
     /**
