@@ -5,7 +5,7 @@ html{
     left: 0;
     padding-left: 0%;
     padding-right: 0%;
-    max-height: 100vh;
+    max-height: 99vh;
     height: fit-content;
     margin: 0%;
     width: 99vw;
@@ -15,7 +15,6 @@ body{
     margin-left: 0;
     max-height: 100vh;
     height: fit-content;
-    margin-bottom: 10vh ;
     background-color: #eeeeee;
     background-repeat: no-repeat;
     background-size: 100vw, 50vh;

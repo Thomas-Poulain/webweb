@@ -22,7 +22,7 @@
 </header>
 
     <?php
-        
+
         if(isset($_SESSION['username'])){
             echo "<nav>
                 <table>
@@ -89,80 +89,68 @@ if (isset($_SESSION['username'])) {
 <?php
 
 if (isset($_SESSION['admin'])) {
-    echo `<img id="background" src="/views/med/ours.jpg" alt="Background for the main display">`;
+    echo "<img id=\"background\" src=\"/views/med/ours.jpg\" alt=\"Background for the main display\">";
+    echo "<main class=\"container\">
+        <section id=\"quizArea\">
+        </section>
+    </main>
+    
+    <footer>
+            <aside id=\"footerTitle\">
+                <h1>Les Ours</h1>
+                <h5 id=\"subtitle\">Force de l'ours, douceur du cœur.</h5>
+            </aside>
+    
+            <aside id=\"infos\">
+                <section class=\"footerSection\">
+                    <h3>Navigation</h3>
+                    <ul class=\"ulFooter\">
+                        <li class=\"listFooter\"><a href=\"#\">Home</a></li>
+                        <li class=\"listFooter\"><a href=\"#\">About</a></li>
+                        <li class=\"listFooter\"><a href=\"#\">Contact us</a></li>
+                        <li class=\"listFooter\"><a href=\"#\">Connect</a></li>
+                    </ul>
+                </section>
+    
+                <section class=\"footerSection\">
+                    <h3>Partenaires</h3>
+                    <ul class=\"ulFooter\">
+                        <li class=\"listFooter\"><a href=\"#\">Lien partenaire 1</a></li>
+                        <li class=\"listFooter\"><a href=\"#\">Lien partenaire 2</a></li>
+                        <li class=\"listFooter\"><a href=\"#\">Lien partenaire 3</a></li>
+                    </ul>
+                </section>
+    
+                <section class=\"footerSection\">
+                    <h3 id=\"contactTitle\">Contact</h3>
+                    <p>00 Avenue road</p>
+                    <p>56000 Vannes</p>
+                    <p>France</p>
+                    <section id=\"icons\">
+                        <img class=\"icon\" src=\"/views/med/facebook.png\">
+                        <img class=\"icon\" src=\"/views/med/discord.png\">
+                        <img class=\"icon\" src=\"/views/med/linkedin.png\">
+                    </section>
+                </section>
+            </aside>
+    
+            <hr id=\"hrFooter\">
+            <aside>
+                <span id=\"end1\">Created by Poulain Thomas / Jamet Titouan / HYEANS Matthieu. All rigth reserved</span>
+                <span id=\"end2\">Terms of service</span>
+            </aside>
+        </footer>";
 } else {
-    echo `<img id="background" src="/views/med/oopsitseemsyouareNOTadmin.png" alt="Background for the main display">`;
+    echo "<img id=\"background\" src=\"/views/med/oopsitseemsyouareNOTadmin.png\" alt=\"Background for the main display\">";
+    echo "<div id=\"text-main-display\">
+        <hr>
+        <h1>OOPS</h1>
+        <hr>
+        <h3>It seems you are not admin</h3>
+    </div>";
 }
 ?>
-<main>
-    <div id="text-main-display">
-        <h2>Home</h3>
-            <hr>
-            <h1>Un ours.</h1>
-            <hr>
-            <h3>Deux ours?</h3>
-    </div>
-    <section id="membres">
-        <h1>Rubrique</h1>
-        <hr>
-    </section>
-    <section id="partenaires">
-        <h1>Rubrique</h1>
-        <hr>
-    </section>
-    <section id="next-event">
-        <h1>Rubrique</h1>
-    </section>
-    <aside id="avis">
-        <h1>Notes</h1>
-    </aside>
-</main>
 
-<footer>
-        <aside id="footerTitle">
-            <h1>Les Ours</h1>
-            <h5 id="subtitle">Force de l'ours, douceur du cœur.</h5>
-        </aside>
-
-        <aside id="infos">
-            <section class="footerSection">
-                <h3>Navigation</h3>
-                <ul class="ulFooter">
-                    <li class="listFooter"><a href="#">Home</a></li>
-                    <li class="listFooter"><a href="#">About</a></li>
-                    <li class="listFooter"><a href="#">Contact us</a></li>
-                    <li class="listFooter"><a href="#">Connect</a></li>
-                </ul>
-            </section>
-
-            <section class="footerSection">
-                <h3>Partenaires</h3>
-                <ul class="ulFooter">
-                    <li class="listFooter"><a href="#">Lien partenaire 1</a></li>
-                    <li class="listFooter"><a href="#">Lien partenaire 2</a></li>
-                    <li class="listFooter"><a href="#">Lien partenaire 3</a></li>
-                </ul>
-            </section>
-
-            <section class="footerSection">
-                <h3 id="contactTitle">Contact</h3>
-                <p>00 Avenue road</p>
-                <p>56000 Vannes</p>
-                <p>France</p>
-                <section id="icons">
-                    <img class="icon" src="/views/med/facebook.png">
-                    <img class="icon" src="/views/med/discord.png">
-                    <img class="icon" src="/views/med/linkedin.png">
-                </section>
-            </section>
-        </aside>
-
-        <hr id="hrFooter">
-        <aside>
-            <span id="end1">Created by Poulain Thomas / Jamet Titouan / HYEANS Matthieu. All rigth reserved</span>
-            <span id="end2">Terms of service</span>
-        </aside>
-    </footer>
 
 </body>
 <script src="/views/js/script.js"></script>
