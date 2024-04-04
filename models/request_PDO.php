@@ -71,6 +71,23 @@ class request_PDO{
         $changePasswd->execute([$hash,$email]);
     }
 
+    /**
+     * Add a response to the database
+     * @param $AttemptScore : the score of the attempt
+     * @param $VisitorIP : the IP of the visitor
+     * @param $VisitorAge : the age of the visitor
+     * @param $VisitorRegion : the region of the visitor
+     * @param $VisitorDiscipline : the discipline of the visitor
+     * @param $VisitorIsClient : if the visitor is a client
+     * @param $ClientID : the id of the client
+     * @param $QuestionText : the text of the question
+     * @param $QuestionType : the type of the question
+     * @param $NbrTrueResponses : the number of true responses
+     * @param $AttemptID : the id of the attempt
+     * @param $ResponseText : the text of the response
+     * @param $IsTrue : if the response is true
+     * @param $QuestionID : the id of the question
+     */
     public function response($id,$question,$reponses){
 
         $question = 'INSERT INTO Question(QuestionText,AttempID) VALUES (?,?)';
