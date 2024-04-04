@@ -68,6 +68,21 @@ class request_PDO{
         $changePasswd = $this->db->prepare($changePasswd);
         $changePasswd->execute([$hash,$email]);
     }
+
+    public function response($AttemptScore,$VisitorIP,$VisitorAge,$VisitorRegion,$VisitorDiscipline,$VisitorIsClient,$ClientID,$QuestionText,$QuestionType,$NbrTrueResponses,$AttemptID,$ResponseText,$IsTrue,$QuestionID){
+    
+        $attempt = 'INSERT INTO Attempt(AttemptScore,VisitorIP,VisitorAge,VisitorRegion,VisitorDiscipline,VisitorIsClient,ClientID) VALUES (?,?,?,?,?,?,?)';
+        $attempt = $this->db->prepare($attempt);
+        $attempt->execute([$AttemptScore,$VisitorIP,$VisitorAge,$VisitorRegion,$VisitorDiscipline,$VisitorIsClient,$ClientID]);
+
+        $question = 'INSERT INTO Question(QuestionText,QuestionType,NbrTrueResponses,AttempID) VALUES (?,?,?,?,?,?,?)';
+        $question = $this->db->prepare($question);
+        $question->execute([$QuestionText,$QuestionType,$NbrTrueResponses,$AttemptID]);
+
+        $response = 'INSERT INTO Response(ResponseText,IsTrue,QuestionID) VALUES (?,?,?,?,?,?,?)';
+        $response = $this->db->prepare($response);
+        $response->execute([$ResponseText,$IsTrue,$QuestionID]);
+    }
 }
 
 ?>
