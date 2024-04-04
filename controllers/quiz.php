@@ -11,6 +11,7 @@ class ConnectController extends Controller{
 
     /**
      * Get method
+     * @param $request
      */
     public function get($request){
         $this->render('quiz',[]);
