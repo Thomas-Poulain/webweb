@@ -7,7 +7,7 @@
 */
 require_once(__ROOT__.'/controllers/Controller.php');
 
-class resetPasswordController extends Controller{
+class ResetPasswordController extends Controller{
 
     /**
      * Get method

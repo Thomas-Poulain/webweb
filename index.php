@@ -23,6 +23,10 @@ ApplicationController::getInstance()->addRoute('resetPassword', CONTROLLERS_DIR.
 ApplicationController::getInstance()->addRoute('main', CONTROLLERS_DIR.'/main.php');
 ApplicationController::getInstance()->addRoute('admin', CONTROLLERS_DIR.'/admin.php');
 ApplicationController::getInstance()->addRoute('quiz', CONTROLLERS_DIR.'/quiz.php');
+ApplicationController::getInstance()->addRoute('about', CONTROLLERS_DIR.'/about.php');
+ApplicationController::getInstance()->addRoute('contact', CONTROLLERS_DIR.'/contact.php');
+
+
 
 
 // Process the request
